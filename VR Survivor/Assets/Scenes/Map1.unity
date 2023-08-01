@@ -670,6 +670,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 9035101744312972764, guid: 2b5e994028f568344bbf133786f49b77, type: 3}
   shootingSpeed: 0.4
+  bulletList: []
+  numberOfBullets: 100
+  parent: {fileID: 0}
+  hand: Left
 --- !u!1 &1181202256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,6 +2146,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 9035101744312972764, guid: 2b5e994028f568344bbf133786f49b77, type: 3}
   shootingSpeed: 0.4
+  bulletList: []
+  numberOfBullets: 100
+  parent: {fileID: 0}
+  hand: Right
 --- !u!1 &2014644937
 GameObject:
   m_ObjectHideFlags: 0

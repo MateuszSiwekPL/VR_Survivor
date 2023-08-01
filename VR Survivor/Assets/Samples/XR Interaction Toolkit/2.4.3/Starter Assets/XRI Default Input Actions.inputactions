@@ -2197,6 +2197,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Shooting",
+            "id": "ac03cc96-7850-42e0-83ba-4c4412d8f2f5",
+            "actions": [
+                {
+                    "name": "ShootingLeft",
+                    "type": "Button",
+                    "id": "cdceaee0-274b-4712-b093-9a27052c07b2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ShootingRight",
+                    "type": "Button",
+                    "id": "d8e4bf61-e3b4-4c8c-bef8-942d1d3645c3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f2477b42-6a6f-4b23-ada0-0be3b94693fa",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShootingLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "61c0ed42-6439-4027-a1f2-deb8df8376ee",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShootingRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
