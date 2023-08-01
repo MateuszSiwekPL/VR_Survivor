@@ -702,7 +702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPooling: {fileID: 1181202258}
   timeBetweenSpawn: 0.01
-  radious: 50
+  radious: 100
 --- !u!114 &1181202258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,9 +715,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46565dbd7a7f6f8468da15742789802b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7073112188474420370, guid: 04035c2cd4380e84cb2e722f6672ed0b, type: 3}
+  enemy:
+  - {fileID: 5784050967781612583, guid: 3d9ce70bd167b71469f5ab332d2c2f26, type: 3}
+  - {fileID: 6286678523437506596, guid: a086ec1eb3b77a842acf8337b9e73d0e, type: 3}
+  - {fileID: 5521279207160557708, guid: d899c8669c7dcf6448ca3076582b8128, type: 3}
+  - {fileID: 6577257765920949650, guid: 5644f08abc95ca248b1153d16c8d1928, type: 3}
   enemiesList: []
-  numberOfEnemies: 200
+  numberOfEnemies: 128
   parent: {fileID: 1181202259}
 --- !u!4 &1181202259
 Transform:

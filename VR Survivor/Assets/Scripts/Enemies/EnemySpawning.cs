@@ -12,7 +12,7 @@ public class EnemySpawning : MonoBehaviour
 
     private void Start() 
     {
-        StartCoroutine(Spawning(20));
+        StartCoroutine(Gameplay());
     }
 
     private Vector3 Positioning()
@@ -22,11 +22,11 @@ public class EnemySpawning : MonoBehaviour
         return positionToSpawn;
     }
 
-    IEnumerator Spawning(int enemiesToSpawn)
+    IEnumerator Spawning(int enemiesToSpawn, int stage)
     {
         for (int i = 0; i < enemiesToSpawn; i++)
         {
-            var obj = enemyPooling.Pooling();
+            var obj = enemyPooling.Pooling(stage);
             obj.transform.position = Positioning();
             obj.SetActive(true);
 
@@ -34,6 +34,15 @@ public class EnemySpawning : MonoBehaviour
         }
     }
 
+    IEnumerator Gameplay()
+    {
+        for (int i = 1; i <= 6; i++)
+        {
+            StartCoroutine(Spawning(i*2, 0));
+            yield return new WaitForSeconds(i*5);
+        }
+        
 
+    }
 
 }
