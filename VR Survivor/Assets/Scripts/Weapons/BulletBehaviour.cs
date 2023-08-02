@@ -5,6 +5,8 @@ using UnityEngine;
 public class BulletBehaviour : MonoBehaviour
 {
     [SerializeField] float speed;
+
+    [SerializeField] float dmg;
     
     void Update()
     {
@@ -15,8 +17,8 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (col.CompareTag("Enemy"))
         {
-            Debug.Log("hit");
-            Destroy(col.gameObject);
+            col.GetComponent<EnemyBehaviour>().Hit(dmg);
+            gameObject.SetActive(false);
         }
     
     }
