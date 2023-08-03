@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8470082054943550343}
   - component: {fileID: 8035964991642467434}
   - component: {fileID: 6070070457869679648}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: -2167206124084460032}
   - component: {fileID: 1552477542348277365}
   - component: {fileID: -4410286220403766731}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 1.3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -211,6 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.015
   hp: 3
+  dmg: 1
   anim: {fileID: -4410286220403766731}
   shield: {fileID: 4224642348322064526}
   explosionParticles: {fileID: 0}

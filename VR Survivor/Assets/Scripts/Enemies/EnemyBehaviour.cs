@@ -7,6 +7,7 @@ public class EnemyBehaviour : MonoBehaviour
     [Header("Enemy values")]
     [SerializeField] float speed;
     [SerializeField] float hp;
+    [SerializeField] float dmg;
     
     [Header("Animations")]
     [SerializeField] Animator anim;
@@ -51,6 +52,15 @@ public class EnemyBehaviour : MonoBehaviour
         yield return new WaitForSeconds(amountToWait);
         expl.SetActive(false);
         gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider col) 
+    {
+        if(col.CompareTag("PlayerShield"))
+        {
+            col.GetComponent<ShieldBehaviour>().Hit(dmg);
+            gameObject.SetActive(false);
+        }
     }
 
     public void DisableShield()
