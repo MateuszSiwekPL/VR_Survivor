@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6485820784091113567
 Transform:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5784050967781612583}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 30, y: 15, z: 23}
@@ -212,6 +212,8 @@ MonoBehaviour:
   speed: 0.015
   hp: 3
   anim: {fileID: -4410286220403766731}
+  shield: {fileID: 4224642348322064526}
+  explosion: {fileID: 100000, guid: 876cb26c7c6ab42e49a9cace28b90b8b, type: 3}
 --- !u!95 &-4410286220403766731
 Animator:
   serializedVersion: 4

@@ -10,6 +10,8 @@ public class EnemyBehaviour : MonoBehaviour
     
     [Header("Animations")]
     [SerializeField] Animator anim;
+    [SerializeField] GameObject shield;
+    [SerializeField] GameObject explosion;
 
 
     
@@ -30,11 +32,17 @@ public class EnemyBehaviour : MonoBehaviour
         if(hp <= 0)
         {
             gameObject.SetActive(false);
+            Instantiate(explosion, transform.position, Quaternion.identity);
         }
         else
         {
-            Debug.Log("hit");
+            shield.SetActive(true);
             anim.SetTrigger("Hit");
         }
+    }
+
+    public void DisableShield()
+    {
+        shield.SetActive(false);
     }
 }
