@@ -11,12 +11,12 @@ public class EnemyBehaviour : MonoBehaviour
     [Header("Animations")]
     [SerializeField] Animator anim;
     [SerializeField] GameObject shield;
-    [SerializeField] GameObject explosion;
-
-
+    [SerializeField] ExplosionParticles explosionParticles;
+    [SerializeField] float amountToWait;
     
 
-
+    private void Awake() => explosionParticles = GameObject.Find("Enemies").GetComponent<ExplosionParticles>();   
+    
 
     private void Update() 
     {
@@ -31,14 +31,26 @@ public class EnemyBehaviour : MonoBehaviour
         hp -= dmg;
         if(hp <= 0)
         {
-            gameObject.SetActive(false);
-            Instantiate(explosion, transform.position, Quaternion.identity);
+            StartCoroutine(Explosion());
         }
         else
         {
             shield.SetActive(true);
             anim.SetTrigger("Hit");
         }
+    }
+
+    IEnumerator Explosion()
+    {
+        gameObject.transform.localScale = Vector3.zero;
+
+        var expl = explosionParticles.Pooling();
+        expl.transform.position = transform.position;
+        expl.SetActive(true);
+
+        yield return new WaitForSeconds(amountToWait);
+        expl.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void DisableShield()

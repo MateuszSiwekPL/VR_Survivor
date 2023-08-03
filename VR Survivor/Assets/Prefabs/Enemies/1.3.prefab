@@ -213,7 +213,8 @@ MonoBehaviour:
   hp: 3
   anim: {fileID: -4410286220403766731}
   shield: {fileID: 4224642348322064526}
-  explosion: {fileID: 100000, guid: 876cb26c7c6ab42e49a9cace28b90b8b, type: 3}
+  explosionParticles: {fileID: 0}
+  amountToWait: 0.95
 --- !u!95 &-4410286220403766731
 Animator:
   serializedVersion: 4
