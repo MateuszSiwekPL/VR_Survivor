@@ -59,7 +59,7 @@ public class EnemyBehaviour : MonoBehaviour
         if(col.CompareTag("PlayerShield"))
         {
             col.GetComponent<ShieldBehaviour>().Hit(dmg);
-            gameObject.SetActive(false);
+            StartCoroutine(Explosion());
         }
     }
 
